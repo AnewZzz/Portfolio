@@ -103,8 +103,8 @@
                     </div>
                     <div class="about-item">
                         <div class="abt-text">
-                            <p class="large-text">
-                                ∞</p>
+                            <p class="large-text" id="client">
+                                20+</p>
                             <p class="small-text">Happy <br /> Clients</p>
                         </div>
                     </div>
@@ -219,11 +219,11 @@
                     <div class="hover-items">
                         <h3>Project Source</h3>
                         <div class="icons">
-                            <a href="#https://github.com/pandeykushal" class="icon">
+                            <a href="#https://github.com/karkianup" class="icon">
                                 <i class="fab fa-github"></i>
                             </a>
                             
-                            <a href="https://www.youtube.com/channel/UCapkFafdQPHwAI9asO8qINA" class="icon">
+                            <a href="#" class="icon">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </div>
@@ -236,11 +236,11 @@
                     <div class="hover-items">
                         <h3>Project Source</h3>
                         <div class="icons">
-                            <a href="https://github.com/pandeykushal" class="icon">
+                            <a href="https://github.com/karkianup" class="icon">
                                 <i class="fab fa-github"></i>
                             </a>
                             
-                            <a href="https://www.youtube.com/channel/UCapkFafdQPHwAI9asO8qINA" class="icon">
+                            <a href="#" class="icon">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </div>
@@ -253,11 +253,11 @@
                     <div class="hover-items">
                         <h3>Project Source</h3>
                         <div class="icons">
-                            <a href="https://github.com/pandeykushal" class="icon">
+                            <a href="https://github.com/karkianup" class="icon">
                                 <i class="fab fa-github"></i>
                             </a>
                             
-                            <a href="https://www.youtube.com/channel/UCapkFafdQPHwAI9asO8qINA" class="icon">
+                            <a href="#" class="icon">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </div>
@@ -270,11 +270,11 @@
                     <div class="hover-items">
                         <h3>Project Source</h3>
                         <div class="icons">
-                            <a href="https://github.com/pandeykushal" class="icon">
+                            <a href="https://github.com/karkianup" class="icon">
                                 <i class="fab fa-github"></i>
                             </a>
                             
-                            <a href="https://www.youtube.com/channel/UCapkFafdQPHwAI9asO8qINA" class="icon">
+                            <a href="#" class="icon">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </div>
@@ -287,11 +287,11 @@
                     <div class="hover-items">
                         <h3>Project Source</h3>
                         <div class="icons">
-                            <a href="https://github.com/pandeykushal" class="icon">
+                            <a href="https://github.com/karkianup" class="icon">
                                 <i class="fab fa-github"></i>
                             </a>
                             
-                            <a href="https://www.youtube.com/channel/UCapkFafdQPHwAI9asO8qINA" class="icon">
+                            <a href="#" class="icon">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </div>
@@ -304,11 +304,11 @@
                     <div class="hover-items">
                         <h3>Project Source</h3>
                         <div class="icons">
-                            <a href="https://github.com/pandeykushal" class="icon">
+                            <a href="https://github.com/karkianup" class="icon">
                                 <i class="fab fa-github"></i>
                             </a>
                             
-                            <a href="https://www.youtube.com/channel/UCapkFafdQPHwAI9asO8qINA" class="icon">
+                            <a href="#" class="icon">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </div>
@@ -321,11 +321,11 @@
                     <div class="hover-items">
                         <h3>Project Source</h3>
                         <div class="icons">
-                            <a href="https://github.com/pandeykushal" class="icon">
+                            <a href="https://github.com/karkianup" class="icon">
                                 <i class="fab fa-github"></i>
                             </a>
                             
-                            <a href="https://www.youtube.com/channel/UCapkFafdQPHwAI9asO8qINA                                                           " class="icon">
+                            <a href="#" class="icon">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </div>
@@ -462,8 +462,14 @@
         let project=document.getElementById('project');
         let experienceYear=document.getElementById('experienceYear');
         let customerReview=document.getElementById('customerReview');
+        let client=document.getElementById('client');
 
-        customerCount=0;
+
+        let clientCount=0;
+        client.innerHTML=clientCount+'+';
+
+
+        let customerCount=0;
         customerReview.innerHTML=customerCount+'+';
 
         let aboutMe=document.getElementById('aboutMe');;
@@ -475,52 +481,51 @@
         project.innerHTML=projectCount+'+';
 
 
-        aboutMe.addEventListener('click',()=>{
-            setTimeout(()=>{
-                if(projectCount<=20)
-                {
-                    const projectCountInterval=setInterval(()=>{
-                        project.innerHTML=projectCount++ +'+';
+        aboutMe.addEventListener('click', () => {
+    setTimeout(() => {
 
-                        if(projectCount==21)
-                        {
-                            clearInterval(projectCountInterval)
-                        }
-                },100)
+        if (projectCount <= 30) {
+            const projectCountInterval = setInterval(() => {
+                project.innerHTML = projectCount++ + '+';
 
-                // experienceYear
-
-                if(projectCount <=2 )
-                {
-                    const experienceCountInterval=setInterval(()=>{
-                            experienceYear.innerHTML=experienceCount++ +'+'
-                            if(experienceCount==3)
-                        {
-                            clearInterval(experienceCountInterval)
-                        }
-                    },100)
+                if (projectCount == 31) {
+                    clearInterval(projectCountInterval);
                 }
+            }, 100);
+        }
+            // experienceYear
 
+            if (experienceCount <= 2) {
+                const experienceCountInterval = setInterval(() => {
+                    experienceYear.innerHTML = experienceCount++ + '+';
+                    if (experienceCount == 3) {
+                        clearInterval(experienceCountInterval);
+                    }
+                }, 100);
+            }
 
-                if(customerCount <=10 )
-                {
-                    const customerCountReview=setInterval(()=>{
-                        customerReview.innerHTML=customerCount++ +'+'
-                            if(customerCount==11)
-                        {
-                            clearInterval(customerCountReview)
-                        }
-                    },100)
-                }
+            if (customerCount <= 10) {
+                const customerCountReview = setInterval(() => {
+                    customerReview.innerHTML = customerCount++ + '+';
+                    if (customerCount == 11) {
+                        clearInterval(customerCountReview);
+                    }
+                }, 100);
+            }
+            
 
-
-
+            if (clientCount <= 30) {
+                const clientCountReview = setInterval(() => {
+                    client.innerHTML = clientCount++ + '+';
+                    if (clientCount == 31) {
+                        clearInterval(clientCountReview);
+                    }
+                }, 100);
             }
 
 
-            },2000)
-
-    })
+    }, 2000);
+});
 
     </script>
 
