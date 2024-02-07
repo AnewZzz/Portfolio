@@ -13,6 +13,29 @@
 
     <meta name="og:image" content="img/anup.jfif">
 
+    <style>
+        @keyframes moveText {
+            0% { transform: translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            100% { transform: translateX(100%); opacity: 1; }
+        }
+    
+        .name span {
+            display: inline-block;
+            animation: moveText 10s linear infinite;
+        }
+    
+        .name span:nth-child(1) { animation-delay: 0s; }
+        .name span:nth-child(2) { animation-delay: 1s; }
+        .name span:nth-child(3) { animation-delay: 2s; }
+        .name span:nth-child(4) { animation-delay: 3s; }
+        .name span:nth-child(5) { animation-delay: 4s; }
+        .name span:nth-child(6) { animation-delay: 5s; }
+        .name span:nth-child(7) { animation-delay: 6s; }
+        .name span:nth-child(8) { animation-delay: 7s; }
+        .name span:nth-child(9) { animation-delay: 8s; }
+        .name span:nth-child(10) { animation-delay: 9s; }
+    </style>
 </head>
 <body class="main-content">
     <header class="container header active" id="home">
@@ -24,9 +47,13 @@
                 </div>
             </div>
             <div class="right-header">
-                <h1 class="name">
+                <!-- <h1 class="name" id="text">
                     Hi, I'm <span>Anup karki.</span>
                     A Backend Developer  .
+                </h1> -->
+
+                <h1 class="name" id="text">
+                    Hi, I'm <span>A</span><span>n</span><span>u</span><span>p</span> <span>k</span><span>a</span><span>r</span><span>k</span><span>i</span>.A Backend Developer  .
                 </h1>
                 <p>
                     Welcome to my portfolio! I am a dedicated backend developer with a passion for crafting efficient and scalable solutions that power the core functionality of web applications. 
@@ -112,6 +139,15 @@
                     </div>
                     <div class="progress-bar">
                         <p class="prog-title">javascript</p>
+                        <div class="progress-con">
+                            <p class="prog-text skills">80%</p>
+                            <div class="progress">
+                                <span class="js"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">laravel</p>
                         <div class="progress-con">
                             <p class="prog-text skills">80%</p>
                             <div class="progress">
@@ -487,5 +523,6 @@
     })
 
     </script>
+
 </body>
 </html>
