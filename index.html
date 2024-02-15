@@ -43,8 +43,8 @@
             <div class="left-header">
                 <div class="h-shape"></div>
                 <div class="image">
-                    <!-- <img src="img/anup.jfif" alt=""> -->
-                    <img src="img/web.jpg" alt="">
+                    <img src="img/anup.jfif" alt="">
+                    <!-- <img src="img/web.jpg" alt=""> -->
                 </div>
             </div>
             <div class="right-header">
@@ -54,7 +54,7 @@
                 </h1> -->
 
                 <h1 class="name" id="text">
-                    Hi, I'm Anup karki.
+                    Hi, I'm Anup karki.<br>
                     A <span>B</span><span>a</span><span>c</span><span>k</span><span>e</span><span>n</span><span>d</span> Developer  .
                 </h1>
                 <p>
@@ -73,7 +73,12 @@
     <main>
         <section class="container about" id="about">
             <div class="main-title">
-                <h2>About <span>me</span></h2>
+                <h2>About <span>me</span> </h2>
+                <h4>
+                    <span id="learning">
+                        (Learning Every Day....) 
+                    </span>
+                </h4>
                 <!-- <h2><span class="bg-text">know more</span></h2> -->
             </div>
             <div class="about-container">
@@ -211,6 +216,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
            
@@ -538,6 +544,23 @@
     }, 2000);
 });
 
+
+let learning=document.getElementById('learning');
+loaderCounter=0;
+        // const loadingTexts = ['Learning Every Day.', 'Learning Every Day..', 'Learning Every Day...','Learning Every Day....'];
+        const loadingTexts = ['🚀 Launching into Learning...', '📚 Gathering Knowledge...', '💡 Illuminating Insights...', '🌟 Sparking Creativity...', '🎉 Celebrating Progress...'];
+        
+        setInterval(()=>{
+        learning.innerHTML=loadingTexts[loaderCounter];
+            loaderCounter +=1;
+
+            if(loaderCounter==5)
+            {
+              loaderCounter=0;
+            }
+
+          
+        },1500)
     </script>
 
 </body>
