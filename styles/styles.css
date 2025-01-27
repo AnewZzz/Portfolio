@@ -39,7 +39,9 @@ body {
   background-color: var(--color-primary);
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
-  color: var(--color-white);
+  color: var(--color-white)
+  ;
+  overflow-y: auto; /* Enable vertical scrolling */
   transition: all 0.4s ease-in-out;
 }
 
@@ -50,27 +52,59 @@ a {
   font-family: inherit;
 }
 
+/* header {
+  min-height: 100vh;
+  color: var(--color-white);
+  padding: 0 !important;
+} */
+
 header {
+  min-height: auto;   /* Adjust based on content */
+  overflow: visible;  /* Ensure content is not clipped */
+}
+
+/* header {
   min-height: 100vh;
   color: var(--color-white);
   overflow: hidden;
   padding: 0 !important;
-}
+} */
 
-section {
-  min-height: 100vh;
+
+
+/* section { */
+  /* min-height: 100vh;
   width: 100%;
   position: absolute;
   left: 0;
   top: 0;
   padding: 3rem 5rem;
+} */
+/* section {
+  min-height: 100vh;
+  width: 100%;
+  padding: 3rem 5rem;
+} */
+
+section {
+  width: 100%;
+  padding: 3rem 5rem; /* Keep padding for spacing */
+  position: static;   /* Allow natural stacking */
+  min-height: auto;   /* Adjust height based on content */
 }
 
-.container {
+
+/* .container {
   display: none;
   transform: translateY(-100%) scale(0);
   transition: all 0.4s ease-in-out;
   background-color: var(--color-primary);
+} */
+
+.container {
+  display: block;     /* Ensure content is visible */
+  transform: none;    /* Remove unnecessary transforms */
+  transition: none;   /* Remove animations on container */
 }
 
 .active {
@@ -179,6 +213,9 @@ section {
   z-index: -1;
   -webkit-clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
           clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+}
+.header, .about, .portfolio, .contact {
+  min-height: 100vh; /* Adjusts to content size */
 }
 .header-content .left-header .image {
   border-radius: var(--br-sm-2);
