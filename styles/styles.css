@@ -61,6 +61,9 @@ a {
 header {
   min-height: auto;   /* Adjust based on content */
   overflow: visible;  /* Ensure content is not clipped */
+  color: var(--color-white);
+  overflow: hidden;
+  padding: 0 !important;
 }
 
 /* header {
